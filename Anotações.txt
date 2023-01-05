@@ -1,0 +1,45 @@
+É recomendado fazer um downgrade do node para fazer este curso. O downgrade
+do node pode ser feito usando a ferramenta nvm:
+    https://github.com/nvm-sh/nvm#about
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+Como eu fiz: baixe o arquivo no link que está no curl acima 
+e rode ele no git bash:
+    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh 
+
+A versão do node que está em uso neste momento é a 18.12.1.
+Para instalar o node 10, rode: nvm install v14.21.2
+Para usar esse node, rode: nvm use v14.21.2
+A versão do node selecionada pelo nvm só funciona no terminal em que
+você selecionou o node.
+
+O site do cliente do angular tem um passo a passo para instalar o cliente
+recomendado pelo site do Angular.
+    Site do Angular: http://angular.io
+    Site do cliente do Angular: http://cli.angular.io
+
+Para listar as versões disponíveis do Angular no npm:
+    npm view @angular/cli versions
+
+Vou tentar usar a versão 10.2.4 do cliente. A versão do curso é 10.1.6.
+
+Após rodar o npme install -g @angular/cli, o terminal vai ter o comando ng
+disponível para operar com o Angular.
+
+O passo a passo na página do cliente Angular é:
+    npm install -g @angular/cli@10.2.4
+    ng new bytebank
+    cd bytebank
+    ng serve
+
+
+Ao rodar o ng new <nome-do-projeto>, vão ser feitas algumas perguntas:
+    Q: Adicionar roteamento do Angular?
+    A: Não, porque vai ser feito na unha.
+    Q: Qual formato de folha de estivo usar?
+    A: SCSS.
+
+Ao rodar o comando pra servir a aplicação, você pode usar o parâmetro open
+para abrir a página no browser após terminar de subir o server: 
+    ng serve --open
