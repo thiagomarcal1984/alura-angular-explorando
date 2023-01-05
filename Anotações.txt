@@ -43,3 +43,10 @@ Ao rodar o ng new <nome-do-projeto>, vão ser feitas algumas perguntas:
 Ao rodar o comando pra servir a aplicação, você pode usar o parâmetro open
 para abrir a página no browser após terminar de subir o server: 
     ng serve --open
+
+
+Nesse curso não será necessário o uso do Strict Mode, configuração que o 
+Angular ativa em todos os projetos criados pela CLI por padrão.
+
+Por isso, será necessário fazer algumas modificações no arquivo tsconfig.json
+para ter os resultados encontrados pelo instrutor nos vídeos.
