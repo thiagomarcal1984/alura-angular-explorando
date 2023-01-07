@@ -70,3 +70,10 @@ O arquivo .ts conterá a lógica do componente, e usa a seguinte estrutura:
         // ... propriedades do componente.
     }
 
+Instale o Angular Extension Pack no VS Code.
+
+Dentro do arquivo angular.json há o objeto projects/<projeto atual>/prefix.
+Todos os componentes dentro de <projeto atual> devem usar no seletor o prefix.
+
+Além de definir o prefixo do seletor do componente, precisamos declará-lo no 
+módulo (arquivo app.module.ts).
