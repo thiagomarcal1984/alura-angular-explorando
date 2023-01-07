@@ -149,4 +149,12 @@ Analisando do componente filho para o pai:
         1)  o componente filho (nova-transferencia)
         2)  o event binding com o evento declarado no componente filho;
         3)  o método que será invocado do AppComponent (no .ts).
-    
+
+Encadeamento opcional: The ?. operator is like the . chaining operator, 
+except that instead of causing an error if a reference is nullish (null or 
+undefined), the expression short-circuits with a return value of undefined. 
+When used with function calls, it returns undefined if the given function 
+does not exist.
+
+Traduzindo: colocando interrogação antes do ponto pode antecipar o retorno
+de undefined, caso o objeto seja nulo.
