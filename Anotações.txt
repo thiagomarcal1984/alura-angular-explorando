@@ -215,3 +215,21 @@ to differentiate them from other custom directives and components.
 
 Fonte: https://stackoverflow.com/questions/40078189/angular-why-asterisk
 
+O Angular dispõe de pipes, que servem para formatar valores no template HTML.
+Por exemplo: o pipe date com o parâmetro shortDate formata como 'MM/DD/YYY':
+    <td>{{ transferencia?.data | date: 'shortDate' }}</td>
+
+O pipe para números decimais é assim: 
+    <td>{{ transferencia?.valor | number: '1.2-2' }}</td>
+
+    Onde:
+        O 1o número é a quantidade de números antes do separador;
+        O 2o número é o mínimo de números decimais;
+        O 3o número é o máximo de números decimais.
+
+Dá um BAITA trabalho para definir o LOCALE para formatação de data/hora.
+Mas em resumo, é necessário configurar um provider no módulo do app.
+Use no provider key-value, onde a key é provider, e o value é useValue.
+
+Se o tipo de input não for definido como number, a string do input vai ser
+considerada uma string inválida pra gerar o número.
