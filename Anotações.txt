@@ -50,3 +50,23 @@ Angular ativa em todos os projetos criados pela CLI por padrão.
 
 Por isso, será necessário fazer algumas modificações no arquivo tsconfig.json
 para ter os resultados encontrados pelo instrutor nos vídeos.
+
+Padrão de nomenclatura dos componentes no Angular:
+    src/app/<nome-do-componente>
+        -> <nome-do-componente>.component.ts
+        -> <nome-do-componente>.component.scss
+        -> <nome-do-componente>.component.html
+
+O arquivo .ts conterá a lógica do componente, e usa a seguinte estrutura:
+    import { Component } from '@angular/core';
+
+    @Component({
+        selector: 'componente', // Nome da tag para chamar o componente.
+        templateUrl: './componente.component.html',
+        styleUrls: ['./componente.component.scss']
+    })
+    export class ComponenteComponent {
+        title = 'bytebank';
+        // ... propriedades do componente.
+    }
+
