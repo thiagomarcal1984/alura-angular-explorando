@@ -106,3 +106,20 @@ Exemplo de event binding:
     </form>
 
 O evento ngSubmit é mais poderoso do que o evento submit.
+
+Quando referenciamos uma propriedade da classe do componente (conforme .ts),
+ela é acessível pelo HTML do componente por meio de property binding:
+    1) use a diretiva ngModel: <tag ([ngModel])="propriedade" ... >;
+    2) defina o nome do objeto: 
+          <tag ([ngModel])="propriedade" name="nome"> 
+       ou use a diretiva ngModelOptions: 
+          <tag ([ngModel])="propriedade" [ngModelOptions]="{standalone: true}">
+
+Ao atribuir valores iniciais ao componente, eles já aparecem no componente.
+
+Quando usamos declaramos a property binding, ele pode ser:
+    1) One-way data binding: [ngModel]="propriedade"; ou
+    2) Two-way data binding: ([ngModel])="propriedade".
+
+Two-way binding permite que o HTML modifique o modelo no .ts e vice-versa.
+One-way binding só permite mudanças do componente pro template (só no js).
