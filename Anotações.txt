@@ -88,3 +88,21 @@ Sobre o SCSS:
     Para usar a variável declarada, usamos:
         propriedadeCSS: var(--nomeDaVariavel);
         Ex.: .seletor { color: var(--primary); }
+
+Para inserir um evento no formulário, precisamos de usar o Forms Module 
+do Angular. Para isso, precisamos importá-lo no arquivo app.module.ts.
+
+Perceba que declarar um componente do desenvolvedor é diferente de importar
+um módulo do Angular. 
+    1) Nas declarations, declaramos os componentes do desenvolvedor;
+    2) Nos imports, importamos os módulos do Angular que queremos usar.
+
+No Angular, inserimos parênteses na tag do componente para assosciar eventos 
+ao componente. Isso é chamado event binding.
+
+Exemplo de event binding:
+    <form class="formulario" (evento)="metodoDaClasse()">
+        ...
+    </form>
+
+O evento ngSubmit é mais poderoso do que o evento submit.
