@@ -158,3 +158,6 @@ does not exist.
 
 Traduzindo: colocando interrogação antes do ponto pode antecipar o retorno
 de undefined, caso o objeto seja nulo.
+
+Comando para gerar um novo componente no Angular:
+    ng generate component <nome do novo componente>
