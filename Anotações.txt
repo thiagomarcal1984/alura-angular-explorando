@@ -123,3 +123,7 @@ Quando usamos declaramos a property binding, ele pode ser:
 
 Two-way binding permite que o HTML modifique o modelo no .ts e vice-versa.
 One-way binding só permite mudanças do componente pro template (só no js).
+
+O decorator Output serve para marcar um campo de classe como propriedade de 
+saída. EventEmitter é uma interface, cujo método emit é usado para disparar o 
+evento (EventEmitter representa um evento personalizado).
