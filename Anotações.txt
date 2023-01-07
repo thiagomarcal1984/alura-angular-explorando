@@ -77,3 +77,14 @@ Todos os componentes dentro de <projeto atual> devem usar no seletor o prefix.
 
 Além de definir o prefixo do seletor do componente, precisamos declará-lo no 
 módulo (arquivo app.module.ts).
+
+Sobre o SCSS:
+    É possível aninhar estilos. Para isso, use o & (e comercial) mais o sufixo
+    desejado para o estilo aninhado.
+
+    Podemos declarar variáveis no SCSS, prefixando o nome da variável com --
+    (dois hifens).
+
+    Para usar a variável declarada, usamos:
+        propriedadeCSS: var(--nomeDaVariavel);
+        Ex.: .seletor { color: var(--primary); }
