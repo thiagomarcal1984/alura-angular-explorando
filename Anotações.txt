@@ -127,3 +127,26 @@ One-way binding só permite mudanças do componente pro template (só no js).
 O decorator Output serve para marcar um campo de classe como propriedade de 
 saída. EventEmitter é uma interface, cujo método emit é usado para disparar o 
 evento (EventEmitter representa um evento personalizado).
+
+Quando o componente-filho (no exemplo, nova-transferencia) emite um evento, 
+ele pode ser capturado pelo componente pai (no exemplo, app).
+
+Quando submetemos o formulário:
+    1)  O componente nova-transferencia invoca o seu método 
+        NovaTransferenciaComponent.transferir(), que dispara aoTransferir;
+    2)  O componente app captura o evento aoTransferir (EventEmitter) e o 
+        trata no método AppComponent.transferir($event), que recebe como 
+        parâmetro o evento que ele capturou.
+
+Analisando do componente filho para o pai:
+    NovaTransferenciaComponent (no arquivo .ts) declara:
+        1)  o método decorado com @Output, cujo nome vai ser usado no event
+            binding no componente pai (app);
+        2)  o método a partir do qual será disparado o evento que vai ser 
+            propagado para o componente pai (app).
+    
+    O template do AppComponent (app.component.html) declara:
+        1)  o componente filho (nova-transferencia)
+        2)  o event binding com o evento declarado no componente filho;
+        3)  o método que será invocado do AppComponent (no .ts).
+    
