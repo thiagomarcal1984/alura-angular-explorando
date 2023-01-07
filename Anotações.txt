@@ -161,3 +161,23 @@ de undefined, caso o objeto seja nulo.
 
 Comando para gerar um novo componente no Angular:
     ng generate component <nome do novo componente>
+
+Usamos no componente extrato o decorator Input para a property transferencia.
+
+Qual a diferença entre os decorators Input e Output? A direção do fluxo!!!
+Os dados das variáveis decoradas com Output fluem do filho para o pai. Já os
+dados das variáveis decoradas com Input fluem do componente pai para o filho.
+
+Extrato declara transferencia decorada com Input.
+    O AppComponent envia o objeto transferência para ExtratoComponent.
+NovaTransferencia declara aoTransferir decorada com Output.
+    O AppComponent recebe evento aoTransferir de NovaTransferencia.
+
+As propriedades são amarradas (binding) com o componente principal (app),
+com os operadores de:
+    event-binding = ();
+    property-binding = []; ou
+    2way-binding =[()].
+
+Mas independente do binding, o envio/recepção de dados depende do decorator
+usado no componente filho (Input recebe do pai, Output envia para o pai).
