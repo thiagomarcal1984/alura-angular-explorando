@@ -181,3 +181,37 @@ com os operadores de:
 
 Mas independente do binding, o envio/recepção de dados depende do decorator
 usado no componente filho (Input recebe do pai, Output envia para o pai).
+
+O asterisco antes das diretivas do Angular simplificam a criação do código
+compreensível pelo Angular. Exemplo:
+    <!-- Examples (A) and (B) are the same -->
+
+    <!-- (A) *ngIf paragraph -->
+    <p *ngIf="condition">
+        Our heroes are true!
+    </p>
+
+    <!-- (B) [ngIf] with template -->
+    <template [ngIf]="condition">
+        <p>
+            Our heroes are true!
+        </p>
+    </template>
+
+Angular treats template elements in a special way. The * syntax is a shortcut 
+that lets you avoid writing the whole <template> element.
+
+using this:
+    *ngFor="let t of todos; let i=index"
+
+translates it into:
+    template="ngFor: let t of todos; let i=index" 
+
+which is then converted into:
+    <template ngFor [ngForOf]="todos" .... ></template>
+
+Also Agular's Structural directives like ngFor, ngIf etc. Prefixed by * just 
+to differentiate them from other custom directives and components.
+
+Fonte: https://stackoverflow.com/questions/40078189/angular-why-asterisk
+
