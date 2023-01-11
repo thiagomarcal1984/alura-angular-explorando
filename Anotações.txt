@@ -276,3 +276,16 @@ Veja os fontes para ver onde localizar os imports.
 
 Os Observable tem o método subscribe. Toda vez que o observável mudar, ele vai
 disparar a função que foi incluída ao chamar o subscribe.
+
+Graças ao TransferenciaService, o AppComponent não precisa mais escutar os
+eventos associados à atualização das transferências. A declaração dos 
+componentes fica mais enxuta.
+
+O método post no httpClient de TransferenciaService realmente atualiza o 
+arquivo db.json! Repare que o método retorna um Observable tipado: 
+    return this.httpClient.post<Transferencia>(this.url, transferencia);
+    // httpClient.post<Tipo>(url, corpo da mensagem);
+
+O método subscribe no Observable pode receber duas funções como parâmetro:
+a primeira para o fluxo normal de funcionamento, e a segunda para o caso de 
+a primeira função falhar. Essa segunda função, no entanto, está deprecada.
