@@ -233,3 +233,6 @@ Use no provider key-value, onde a key é provider, e o value é useValue.
 
 Se o tipo de input não for definido como number, a string do input vai ser
 considerada uma string inválida pra gerar o número.
+
+A tag ng-template serve para declarar um elemento no componente que NÃO é 
+exibido por padrão. Uma forma de exibir um ng-template é na cláusula ngIf.
