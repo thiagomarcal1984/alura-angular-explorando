@@ -288,4 +288,9 @@ arquivo db.json! Repare que o método retorna um Observable tipado:
 
 O método subscribe no Observable pode receber duas funções como parâmetro:
 a primeira para o fluxo normal de funcionamento, e a segunda para o caso de 
-a primeira função falhar. Essa segunda função, no entanto, está deprecada.
+a primeira função falhar. Essa segunda função, no entanto, está DEPRECADA.
+
+O método subscribe recebe(ia) opcionalmente 3 parâmetros, o primeiro é a função 
+a ser executada quando tudo estiver correto, o segundo é a função a ser 
+executada quando houver algum erro de qualquer gênero durante a execução e por
+fim o terceiro parâmetro é invocado quando todo o fluxo estiver sido concluído.
