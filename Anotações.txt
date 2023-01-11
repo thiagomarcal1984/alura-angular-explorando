@@ -236,3 +236,21 @@ considerada uma string inválida pra gerar o número.
 
 A tag ng-template serve para declarar um elemento no componente que NÃO é 
 exibido por padrão. Uma forma de exibir um ng-template é na cláusula ngIf.
+
+Os services são usados para reúso de lógica em diferentes componentes. Os 
+services são decorados com @Injectable, que recebe o parâmetro providedIn.
+Esse parâmetro define onde o service é injetado. Por padrão o parâmetro é 
+preenchido com a string 'root', mas podemos fornecer qualquer componente onde
+o service será injetado (?).
+
+Como o componente Extrato vai ter seu estado dependente do serviço 
+TransferenciaService, o componente AppComponent não vai precisar gerenciar 
+o estado das transferencias. O AppComponent só precisa injetar o 
+TransferenciaService e usá-lo.
+
+O ExtratoComponent não vai mais esperar fluxo de dados do seu pai AppComponent.
+Portanto, não precisamos mais do decorator Input na variável transferencias.
+
+A extensão Angular Schematics (?) para VS Code permite a geração automática
+de componentes, serviços etc. Basta clicar com o botão direito na pasta onde
+você quer o objeto e escolher qual deles você quer gerar (generate).
