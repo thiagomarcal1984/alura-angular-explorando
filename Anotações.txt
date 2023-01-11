@@ -254,3 +254,16 @@ Portanto, não precisamos mais do decorator Input na variável transferencias.
 A extensão Angular Schematics (?) para VS Code permite a geração automática
 de componentes, serviços etc. Basta clicar com o botão direito na pasta onde
 você quer o objeto e escolher qual deles você quer gerar (generate).
+
+Agora vai ser necessário criar um servidor json para simular o banco de dados:
+    npm install -g json-server
+
+Depois, você roda o JSON Server:
+    json-server --watch data/db.json
+
+Agora você pode acessar a porta 3000. O array de transferências fica disponível
+em http://localhost:3000/transferencias .
+
+Em http://jsontots.com você consegue gerar uma interface TypeScript a partir 
+do JSON que você fornecer. Depois você copia a interface para o modelo.
+(Não funciono no CDTN. Alternativa: https://transform.tools/json-to-typescript)
