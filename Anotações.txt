@@ -294,3 +294,20 @@ O método subscribe recebe(ia) opcionalmente 3 parâmetros, o primeiro é a fun�
 a ser executada quando tudo estiver correto, o segundo é a função a ser 
 executada quando houver algum erro de qualquer gênero durante a execução e por
 fim o terceiro parâmetro é invocado quando todo o fluxo estiver sido concluído.
+
+O módulo AppRoutingModule é criado para conter e configurar as rotas que serão
+usadas pelo app Angular. O módulo precisa ser anotado com NgModule e 
+posteriormente importado em AppModule. A anotação NgModule tem dois 
+parâmetros: imports e exports.
+
+Imports configura as rotas a partir de um array de rotas.
+Cada rota precisa de dois parâmetros: o path da URL e o componente (que pode 
+ser substituído por outros dois parâmetros para redirecionamento: redirectTo e
+o pathMatch=full).
+
+Exports permite que toda a aplicação Angular use as rotas configuradas a partir
+da importação das rotas.
+
+O RouterModule possui um componente que é usado como um placeholder para 
+os componentes da aplicação, que variam em função da URL! O nome desse 
+componente é <router-outlet>.
