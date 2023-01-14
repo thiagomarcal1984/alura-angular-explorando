@@ -311,3 +311,14 @@ da importação das rotas.
 O RouterModule possui um componente que é usado como um placeholder para 
 os componentes da aplicação, que variam em função da URL! O nome desse 
 componente é <router-outlet>.
+
+Usar a propriedade routerLink ao invés de href nas tags de ângora (<a>) impede
+o reload de todos os componentes da aplicação Angular. Ao clicar em um link
+com a propriedade routerLink, apenas o componente router-outlet é atulizado com
+o componente referenciado.
+
+Podemos injetar um objeto Router no construtor do componente para navegar pelas
+rotas configuradas pelo AppRoutingModule, por meio do método navigateByUrl.
+
+A propriedade routerLinkActive serve para aplicar uma classe quando a rota 
+corresponder ao path atual. Aqui, o link é escondido se for do path atual.
